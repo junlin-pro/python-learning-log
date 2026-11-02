@@ -1,0 +1,27 @@
+results = []
+while True:
+    mw = input("输入相对分子量g/mol(输入q退出):")
+    if mw == "q":
+        break
+    mass = float(input("输入物质质量g:"))
+    vol = float(input("输入物质体积L:"))
+    c = mass / float(mw) / vol 
+    print(f"摩尔浓度:{c:.4f} mol/L({c *1000:.2f} mmol/L)")
+    results.append(c)
+
+if results:
+    avg = sum(results) / len(results)
+    print(f"共算了{len(results)}组,平均浓度为{avg:.4f} mol/L")
+else:
+    print("未计算任何数据")
+
+# 筛选出浓度大于 1.0 mol/L 的试剂
+high_conc = [conc for conc in [1.0, 0.5, 2.0, 1.5] if conc > 1.0]
+
+conc = [1.0, 0.5, 2.0, 1.5]
+high_conc = []
+
+for c in range(len(conc))
+  if c > 1.0:
+    high_conc.append(c)
+print(high_conc)
